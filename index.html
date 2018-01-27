@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>dialogs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/index.css" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <div class="mycontainer">
+            <ul class="nav">
+                <li class="title"><span>WebTitle</span></li>
+                <li class="active"><a href="javascript:">Home page</a></li>
+                <li><a class="error" href="javascript:">Solutions</a></li>
+                <li><a class="error" href="javascript:">About me</a></li>
+            </ul>
+
+            <div class="scene">
+                <div class="container">
+                    <h1>Quick solution --- Common problems</h1>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-10"><span>Topic</span></div>
+                        <div class="col-md-2"><span>Date</span></div>
+                        <div class="col-md-10"><span>Topic</span></div>
+                        <div class="col-md-2"><span>Date</span></div>
+                        <div class="col-md-10"><span>Topic</span></div>
+                        <div class="col-md-2"><span>Date</span></div>
+                    </div>
+                    <br /><br /><br /><br />
+                    <h1>New problems solved</h1>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-10"><span style="height: 400px;">Topic</span></div>
+                        <div class="col-md-2"><span style="height: 400px;">Date</span></div>
+                        <div class="col-md-10"><span style="height: 400px;">Topic</span></div>
+                        <div class="col-md-2"><span style="height: 400px;">Date</span></div>
+                        <div class="col-md-10"><span style="height: 400px;">Topic</span></div>
+                        <div class="col-md-2"><span style="height: 400px;">Date</span></div>
+                    </div>
+                    <br /><br /><br /><br />
+                    <h1>See trends in a diamgram</h1>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12"><span style="height: 500px;">1</span></div>
+                    </div>
+                    <br /><br /><br /><br />
+                    <input class="message" placeholder="Leave your message if you want me to help you.">
+                    <button id="showmodal">Send</button>
+                </div>
+            </div>
+
+        <div>
+            <div id="totop" class="totop">Top</div>
+        </div>
+
+        <div class="mymodal">
+            <div class="window">
+                <a href="javascript:" class="cross closs">&times;</a>
+                <h1 class="capital">Capital</h1>
+                <div class="content">
+                    There are some contents.
+                </div>
+                <div class="bottom">
+                    <button class="green">OK</button>
+                    <button class="black closs">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
