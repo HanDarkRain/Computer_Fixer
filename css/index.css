@@ -22,18 +22,19 @@
     transform: translate(0px,-8px);
 }
 
-div .row {
-	background-color: grey;
-	border-color: white;
-	border-width: 2px;
+div.row div {
+	border: 1px rgba(255,255,255,0.3) solid;
+	padding:20px 20px;
 }
 
-div .row div .col-md-2 {
+div.row div.col-md-2 {
 	text-align: center;
 }
 
-div .row div .col-md-10 {
-	padding-left: 50px;
+div.row div.col-md-10 span {
+	margin-left: 20px;
+	
+
 }
 
 .message {
