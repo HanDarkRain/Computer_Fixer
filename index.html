@@ -43,14 +43,38 @@
                     <br /><br /><br /><br />
                     <h1>See trends in a diamgram</h1>
                     <br />
-                    <div class="row">
-                        <div class="col-md-12"><span style="height: 500px;">1</span></div>
+                    <div class="row mydiagram">
+                        <div class="col-md-6">
+                            <canvas id="doughnut_diagram"></canvas>
+                        </div>
+                        <div class="col-md-6">
+                            <canvas id="bar_diagram"></canvas>
+                        </div>
                     </div>
                     <br /><br /><br /><br />
-                    <input class="message" placeholder="Leave your message if you want me to help you.">
-                    <button id="showmodal">Send</button>
+                    <div class="row mymessage">
+                        <div class="col-md-12">
+                            <span>Content:</span>
+                            <textarea class="message" placeholder="Leave your message if you want me to help you."></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <span>Name:</span><input class="message" placeholder="Please enter your name.">
+                        </div>
+                        <div class="col-md-6">
+                            <span>Email/phone:</span><input class="message" placeholder="Please leave your email/phone number.">
+                        </div>
+                        <div class="col-md-12">
+                            <button id="showmodal">Send</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+        <div class="sidenav">
+            <div class="sidenav-string">
+                <span class="sidenav-progress"></span>
+            </div>
+        </div>
 
         <div>
             <div id="totop" class="totop">Top</div>
@@ -71,6 +95,7 @@
         </div>
 
         <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/Chart.js/2.7.1/Chart.min.js"></script>
         <script src="./js/index.js"></script>
     </body>
 </html>
