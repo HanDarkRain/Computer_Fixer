@@ -1,19 +1,19 @@
-$("#showmodal").on("click", function() {
-    $(".mymodal").addClass("show");
-});
+// $("#showmodal").on("click", function() {
+//     $(".mymodal").addClass("show");
+// });
 
-$(".mymodal .closs").on("click", function() {
-    $(".mymodal").removeClass("show");
-});
+// $(".mymodal .closs").on("click", function() {
+//     $(".mymodal").removeClass("show");
+// });
 
-// $(".nav li [num='1']")
+// // $(".nav li [num='1']")
 
-$(".nav li a.error").on("click",function() {
-	$(".capital").html("Error!");
-	$(".content").html("You did invalid input.");
-	$(".mymodal").addClass("show");
-	// $("xxxxxxx").on("click",function(){xxxx});
-})
+// $(".nav li a.error").on("click",function() {
+// 	$(".capital").html("Error!");
+// 	$(".content").html("You did invalid input.");
+// 	$(".mymodal").addClass("show");
+// 	// $("xxxxxxx").on("click",function(){xxxx});
+// })
 
 
 var diagramLabels = ["System problems", 
@@ -73,10 +73,17 @@ var paramsbar = {
 
 var doughnutDiagram = new Chart("doughnut_diagram",paramsdoughnut);
 
-var barDiagram = new Chart("bar_diagram",paramsbar)
+var barDiagram = new Chart("bar_diagram",paramsbar);
 
 var webHeight = document.body.scrollHeight - window.screen.availHeight * 0.9;
 $(window).on("scroll", function(e) {
     var percentage = $(window).scrollTop() / webHeight * 100;
     $(".sidenav-progress").css("top", percentage+"%");
-})
+});
+
+function resize() {
+    webHeight = document.body.scrollHeight - window.screen.availHeight * 0.9;
+}
+$(window).on("resize", function() {
+    resize();
+});

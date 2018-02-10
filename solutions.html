@@ -19,53 +19,32 @@
 
             <div class="scene">
                 <div class="container">
-                    <h1>Quick solution --- Common problems</h1>
-                    <br />
-                    <div id="quicksolution" class="row">
+                    <!-- Search bar   -->
+                    <h1 style="text-align:center;">Search for Solutions</h1>
+                    <br>
+                    <div class="row transparent">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8"><input class="message"></div>
+                        <div class="col-md-2"></div>
+                    </div>
 
-                    </div>
-                    <br /><br /><br /><br />
-                    <h1>New problems solved</h1>
-                    <br />
-                    <div id="newproblems" class="row">
+                    <!-- Icon nav -->
+                    <div class="iconbar">
+                        <div class="row transparent">
+                            <div class="col-md-3"><div id="system" class="item">System</div></div>
+                            <div class="col-md-3"><div id="software" class="item">Software</div></div>
+                            <div class="col-md-3"><div id="hardware" class="item">Hardware</div></div>
+                            <div class="col-md-3"><div id="external" class="item">External</div></div>
+                        </div>
+                    </div> 
+                    
 
-                    </div>
-                    <br /><br /><br /><br />
-                    <h1>See trends in a diamgram</h1>
-                    <br />
-                    <div class="row mydiagram">
-                        <div class="col-md-6">
-                            <canvas id="doughnut_diagram"></canvas>
-                        </div>
-                        <div class="col-md-6">
-                            <canvas id="bar_diagram"></canvas>
-                        </div>
-                    </div>
-                    <br /><br /><br /><br />
-                    <div class="row mymessage">
-                        <div class="col-md-12">
-                            <span>Content:</span>
-                            <textarea class="message" placeholder="Leave your message if you want me to help you."></textarea>
-                        </div>
-                        <div class="col-md-6">
-                            <span>Name:</span><input class="message" placeholder="Please enter your name.">
-                        </div>
-                        <div class="col-md-6">
-                            <span>Email/phone:</span><input class="message" placeholder="Please leave your email/phone number.">
-                        </div>
-                        <div class="col-md-12">
-                            <button id="showmodal">Send</button>
-                        </div>
-                    </div>
+                    <!-- content -->
+                    <div id="solutionList"></div>
+
                 </div>
             </div>
 
-<!--         <div class="nextpage">
-
-
-
-
-        </div> -->
 
         <div class="sidenav">
             <div class="sidenav-string">
@@ -94,6 +73,6 @@
         <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdn.bootcss.com/Chart.js/2.7.1/Chart.min.js"></script>
         <script src="./js/index.js"></script>
-        <script src="./js/loadData.js"></script>
+        <script src="./js/loadSolutions.js"></script>
     </body>
 </html>

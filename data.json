@@ -1,0 +1,9 @@
+{
+	"count":3,
+	"content": {
+			"quickSolve": ["How to update my software?","Should I update my system", "Which fire wall is better?"],
+			"quickSolveDate": ["2018/2/8", "2018/2/9", "2018/2/10"],
+			"newProblems": ["Why cannot I start my laptop?", "There is no sound in my airphone", "How to connect to the Internet?"],
+			"newProblemsDate": ["2018/2/8", "2018/2/9", "2018/2/10"]
+	}
+}
