@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>dialogs</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
@@ -24,17 +25,23 @@
                     <br>
                     <div class="row transparent">
                         <div class="col-md-2"></div>
-                        <div class="col-md-8"><input class="message"></div>
+                        <div class="col-md-8">
+                            <input id="searchInput" class="message">
+                            <div id="searchBox" class="searchBox">
+                                
+                            </div>
+                        </div>
                         <div class="col-md-2"></div>
                     </div>
+                    
 
                     <!-- Icon nav -->
                     <div class="iconbar">
                         <div class="row transparent">
-                            <div class="col-md-3"><div id="system" class="item">System</div></div>
-                            <div class="col-md-3"><div id="software" class="item">Software</div></div>
-                            <div class="col-md-3"><div id="hardware" class="item">Hardware</div></div>
-                            <div class="col-md-3"><div id="external" class="item">External</div></div>
+                            <div class="col-md-3"><div id="system" class="item" onclick="navTo('System-0');">System</div></div>
+                            <div class="col-md-3"><div id="software" class="item" onclick="navTo('Software-0');">Software</div></div>
+                            <div class="col-md-3"><div id="hardware" class="item" onclick="navTo('Hardware-0');">Hardware</div></div>
+                            <div class="col-md-3"><div id="external" class="item" onclick="navTo('External-0');">External</div></div>
                         </div>
                     </div> 
                     
@@ -44,6 +51,7 @@
 
                 </div>
             </div>
+        </div>
 
 
         <div class="sidenav">

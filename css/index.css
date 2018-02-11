@@ -8,18 +8,24 @@
     position: fixed;
     width: 40px;
     height: 40px;
-    border: 1px #333 solid;
+    border: 3px #ccc solid;
     cursor: pointer;
     text-align: center;
-    line-height: 40px;
+    font-weight: 900;
+    font-size: 22px;
+    color: #ccc;
+    line-height: 33px;
     right: 20px;
     bottom: 20px;
     transition:0.3s ease;
     border-radius: 40px
+
 }
 
 .totop:hover {
-    transform: translate(0px,-8px);
+    transform: translate(0px,-4px);
+    box-shadow:0 0 10px rgba(255,255,255,0.6);
+    box-shadow:0 0 10px rgba(255,255,255,0.6);
 }
 
 div.row.mydiagram {
@@ -58,6 +64,7 @@ div.row div.col-md-10 span {
 
 .message:focus{
 	border-color: rgba(255,255,255,0.8);
+	box-shadow:0 0 5px rgba(255,255,255,0.3);
 }
 
 div.mymessage .col-md-12 {
@@ -83,32 +90,22 @@ div.mymessage .col-md-6:nth-child(odd) {
 	padding: 20px 30px;
 	line-height: 24px;
 	position:fixed;
+	z-index: 10;
 }
 
 .nav li {
 	padding: 0px ;
-	transition: 0.2s;
+	transition: 0.1s ease;
 	color:rgba(255,255,255,0.7);
 }
 
 .nav li:hover{
-	animation:0.4s rotating;
-}
-
-@keyframes rotating{
-	0%{
-		transform: rotate(0deg);
-	}
-	50%{
-		transform: rotate(10deg);
-	}
-	100%{
-		transform: rotate(0deg);
-	}
+	color: white;
+	transform: translateY(-1px);
 }
 
 .mycontainer .nav li.active:hover, .mycontainer .nav li.title:hover{
-	animation:none;
+	transform: none;
 }
 
 .nav li a{
@@ -123,7 +120,7 @@ div.mymessage .col-md-6:nth-child(odd) {
 }
 
 .nav li a:hover{
-	text-shadow: 0px 3px 3px  rgba(0,0,0,0.8);
+	text-shadow:0 0 5px rgba(255,255,255,0.8);
 }
 
 .nav li.title{
@@ -133,14 +130,23 @@ div.mymessage .col-md-6:nth-child(odd) {
 	padding: 0px 10px;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 .mycontainer{
-	background: linear-gradient(to bottom,rgb(150,150,150),black);
-	/*(direction of color gradiation, initial color, final color)*/
 	color:white;
+	overflow-x: hidden;
+	width: 200%;
+	background-color: black;
 }
 
 .scene {
+	background: linear-gradient(to bottom,rgb(150,150,150),black);
+	/*(direction of color gradiation, initial color, final color)*/
 	padding: 14% 10%;
+	width: 50%;
+	overflow: hidden;
 }
 
 button {
@@ -230,6 +236,30 @@ button.black {
 	margin: 20px 0px;
 }
 
+.webtitle {
+	padding: 5% 30px;
+	padding-bottom: 20%;
+	transition: 0.3s ease;
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.webtitle:hover {
+	text-shadow:0 0 5px rgba(255,255,255,0.3);
+}
+
+.webtitle h1 {
+	font-size: 48px;
+	font-weight: 900;
+}
+
+.webtitle small {
+	color: #ddd;
+	font-weight: 700;
+}
+
 .sidenav {
 /*	background: rgba(255,255,255,0.3);*/
 	position:fixed;
@@ -238,6 +268,11 @@ button.black {
 	height: 200px;
 	right: 30px;
 	top: calc(50% - 100px);
+	display: none;
+}
+
+.sidenav.show {
+	display: block;
 }
 
 .sidenav .sidenav-string {
@@ -257,6 +292,35 @@ button.black {
 	border-radius: 100%;
 	margin-top: -7px;
 	margin-left: -7px;
+}
+
+.sidenav .sidenav-string .sidenav-progress .sidenav-text {
+	font-family:'Quicksand', sans-serif, FontAwesome;
+	overflow: hidden;
+	position: absolute;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: auto;
+	height: 40px;
+	right: 0px;
+	top: 0px;
+	margin-right: 20px;
+	margin-top: -12px;
+	background-color: #ddd;
+	line-height: 40px;
+	padding:0 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	opacity: 0.5;
+	font-weight: 900;
+	transition: 0.3s ease;
+}
+
+.sidenav .sidenav-string .sidenav-progress .sidenav-text:hover {
+	opacity: 0.8;
 }
 
 .nextpage {
@@ -279,6 +343,9 @@ button.black {
 	text-align:center;
 	border-bottom: 5px solid transparent;
 	transition:0.3s ease;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 
 .iconbar .item::before {
@@ -340,4 +407,65 @@ button.black {
 
 .solutionList .col-md-10:hover, .solutionList .col-md-10:hover + .col-md-2 {
 	background: rgba(255,255,255,0.08);
+}
+
+.solutionList .listContent {
+	background-color: rgba(0,0,0,0.15);
+	display: none;
+	overflow-y: hidden;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	transition: 0.05s ease;
+}
+
+.solutionList .listContent.show {
+	display: block;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.searchBox {
+	position: absolute;
+	background-color: #888;
+	width: calc(100% - 30px);
+	margin-top: -30px;
+	z-index: 1;
+}
+
+.searchBox .searchItem {
+ 	padding: 5px 10px;
+ 	cursor: pointer;
+ 	transition: 0.3s ease;
+ 	word-wrap: break-word;
+ 	overflow: hidden;
+ 	white-space: nowrap;
+}
+
+.searchBox .searchItem:hover {
+	background-color: rgba(255,255,255,0.15);
+}
+
+.searchBox .searchHeader {
+	font-weight: 700;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.searchBox .searchContent {
+	font-weight: 100;
+	font-size: 12px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#scene1 {
+	width: 50%;
+	padding: 7% 5%;
+}
+
+#scene2 {
+	position: absolute;
+	top: 0;
+	left:100%;
+	width: 100%;
 }
