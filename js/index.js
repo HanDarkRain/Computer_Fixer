@@ -2,9 +2,11 @@
 //     $(".mymodal").addClass("show");
 // });
 
-// $(".mymodal .closs").on("click", function() {
-//     $(".mymodal").removeClass("show");
-// });
+$(".mymodal .closs").on("click", function() {
+    $(".mymodal").removeClass("show");
+    $("#formSubmit")[0].disabled = false;
+    $("#formSubmit").html("send");
+});
 
 // // $(".nav li [num='1']")
 
@@ -15,6 +17,25 @@
 // 	// $("xxxxxxx").on("click",function(){xxxx});
 // })
 
+$("#formSubmit").on("click", function(){
+
+    $("#formSubmit")[0].disabled = true;
+    $("#formSubmit").html("processing");
+
+    let content = $("#formContent").val();
+    let name = $("#formName").val();
+    let from = $("#formFrom").val();
+    $.post("https://handongrun0930.000webhostapp.com/sendmail.php", {
+        "content": content,
+        "name": name,
+        "from": from
+    }, 
+    function(data){
+        $(".capital").html("Success!");
+        $(".content").html("Successfully send the infomation to the host! the infomation will be checked later.");
+        $(".mymodal").addClass("show");
+    });
+});
 
 var diagramLabels = ["System problems", 
 					"Common software problems", 

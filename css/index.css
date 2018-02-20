@@ -1,4 +1,4 @@
-@import url(http://fonts.font.im/css?family=Quicksand);
+@import url(https://fonts.proxy.ustclug.org/css?family=Quicksand);
 
 *{
 	font-family:'Quicksand', sans-serif;
@@ -163,12 +163,16 @@ button {
     opacity: .5;
 }
 
-button:hover {
+button:hover:not([disabled]) {
     opacity: 1;
 }
 
-button:active {
+button:active:not([disabled]) {
     opacity: .6;
+}
+
+button[disabled] {
+	cursor: default;
 }
 
 button:focus {
